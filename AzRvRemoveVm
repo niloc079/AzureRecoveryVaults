@@ -18,7 +18,5 @@ $Container = Get-AzRecoveryServicesBackupContainer -ContainerType AzureVM -Statu
 $BackupItem = Get-AzRecoveryServicesBackupItem -Container $Container -WorkloadType AzureVM -VaultId $vault.ID
 
 Disable-AzRecoveryServicesBackupProtection -Item $BackupItem -VaultId $vault.ID -RemoveRecoveryPoints -Force
-#Old Command
-#Disable-AzureRmRecoveryServicesBackupProtection -Item $BackupItem -VaultId $vault.ID -RemoveRecoveryPoints -Force
 
 ####### Script-End #######
